@@ -20,3 +20,15 @@
 Кнопка помощь со списком команд
 Напихать побольше данных
 дать хорошее описание компьютера
+
+Sort by:
+    Cpu__cores
+    Cpu__threads
+    Cpu__performance
+    Motherboard__slotsRam
+    Gpu__performance
+    Gpu__vram
+    Gpu__performance
+    Psu__power
+    Storage__capacity
+    
