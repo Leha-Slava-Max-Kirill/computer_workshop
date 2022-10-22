@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Computers List</h1>
+  {% if computer_list %}
+  <ul>
+    {% for computer in computer_list %}
+      <li>
+        <a href="{{ computer.get_absolute_url }}">{{ computer.name }}</a> ({{computer.cpu}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no computers in the workshop.</p>
+  {% endif %}
+{% endblock %}

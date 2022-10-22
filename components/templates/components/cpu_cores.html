@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>CPUs List</h1>
+  {% if cpu_list %}
+  <ul>
+    {% for cpu in cpu_list %}
+      <li>
+        ({{cpu}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no CPUs in the workshop.</p>
+  {% endif %}
+{% endblock %}

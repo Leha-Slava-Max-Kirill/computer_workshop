@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>cpus List</h1>
+  {% if cpu_list %}
+  <ul>
+    {% for cpu in cpu_list %}
+      <li>
+        <a href="{{ cpu.get_absolute_url }}">{{ cpu.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no cpus in the workshop.</p>
+  {% endif %}
+{% endblock %}

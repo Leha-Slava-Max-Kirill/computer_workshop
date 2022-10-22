@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>gpus List</h1>
+  {% if gpu_list %}
+  <ul>
+    {% for gpu in gpu_list %}
+      <li>
+        <a href="{{ gpu.get_absolute_url }}">{{ gpu.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no gpus in the workshop.</p>
+  {% endif %}
+{% endblock %}

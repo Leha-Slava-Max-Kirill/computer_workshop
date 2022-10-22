@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>rams List</h1>
+  {% if ram_list %}
+  <ul>
+    {% for ram in ram_list %}
+      <li>
+        <a href="{{ ram.get_absolute_url }}">{{ ram.name }}</a> {{ram.size}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no rams in the workshop.</p>
+  {% endif %}
+{% endblock %}

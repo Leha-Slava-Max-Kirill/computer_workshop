@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ cpu.name }}</h1>
+
+  <p><strong>socket:</strong> <a href="">{{ cpu.socket }}</a></p> 
+  <p><strong>cores:</strong> {{ cpu.cores }}</p>
+  <p><strong>threads:</strong> {{ cpu.threads }}</p>
+  <p><strong>performance:</strong> {{ cpu.performance }}</p>
+  <p><strong>tdp:</strong> {{ cpu.tdp }}</p>
+
+{% endblock %}

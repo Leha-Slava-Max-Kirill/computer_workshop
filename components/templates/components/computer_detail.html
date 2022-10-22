@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ computer.name }}</h1>
+
+  <p><strong>cpu:</strong> <a href="">{{ computer.cpu }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>motherboard:</strong> {{ computer.motherboard }}</p>
+  <p><strong>ram:</strong> {{ computer.ram }}</p>
+  <p><strong>gpu:</strong> {{ computer.gpu }}</p>
+  <p><strong>psu:</strong> {{ computer.psu }}</p>
+  <p><strong>storage:</strong> {{ computer.storage }}</p>
+  <p><strong>cpuCooler:</strong> {{ computer.cpuCooler }}</p>
+
+{% endblock %}

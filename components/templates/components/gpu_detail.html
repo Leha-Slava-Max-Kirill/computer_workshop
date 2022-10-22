@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ gpu.name }}</h1>
+
+  <p><strong>performance:</strong> <a href="">{{ gpu.performance }}</a></p> 
+  <p><strong>vram:</strong> {{ gpu.vram }}</p>
+  <p><strong>powerSupply:</strong> {{ gpu.powerSupply }}</p>
+
+{% endblock %}
