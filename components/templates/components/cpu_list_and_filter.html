@@ -1,0 +1,32 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <form method="get">
+      {% csrf_token %}
+      {{ <form action="" class="cores"></form> }}
+      <button class="button is-success is-fullwidth is-medium mt-5"
+              type="submit">
+      </button>
+  </form>
+
+
+
+    <h1>Computer ASSembler Home</h1>
+    <p>Welcome to Computer ASSembler, a website developed by <em>suraba03, sharss, kitoshka bzn</em>!</p>
+    <h2>Dynamic content</h2>
+    <p>The workshop has the following record counts:</p>
+  
+    <h1>cpus List</h1>
+    {% if num_computers %}
+    <ul>
+      {% for cpu in num_computers %}
+      <li>
+        <a href="{{ cpu.get_absolute_url }}">{{ cpu}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>There are no cpus in the workshop.</p>
+    {% endif %}
+    {% endblock %}
