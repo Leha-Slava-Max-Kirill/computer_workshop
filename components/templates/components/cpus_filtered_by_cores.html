@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+  <input type="value" name="cores" />
+   <input type="submit" value="Go to my link location" 
+        name="Submit" id="frm1_submit" />
+ </form>
+
+    <h1>Computer ASSembler Home</h1>
+    <p>Welcome to Computer ASSembler, a website developed by <em>suraba03, sharss, kitoshka bzn</em>!</p>
+    <h2>Dynamic content</h2>
+    <p>The workshop has the following record counts:</p>
+  
+    <h1>cpus List</h1>
+    {% if cpus_list %}
+    <ul>
+      {% for cpu in cpus_list %}
+      <li>
+        <a href="{{ cpu.get_absolute_url }}">{{ cpu }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>There are no cpus in the workshop.</p>
+    {% endif %}
+    {% endblock %}
