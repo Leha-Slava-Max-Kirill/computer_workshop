@@ -1,5 +1,185 @@
-.sidebar-nav {
-    margin-top: 20px;
+
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('./img/dot.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('./img/dot.png');
+  cursor: pointer;
+}
+
+
+{% load bootstrap5 %}
+*{
     padding: 0;
-    list-style: none;
-  }
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: black;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif;
+}
+.nav-link:hover{
+    color: black;
+}
+.fas{
+    font-size: 2.5rem;
+}
+
+.search{
+    height: 40px;
+    width:  80%;
+    border-radius: 60px;
+    outline: none;
+    margin-right: -30px;
+    border: 2px solid rgb(248, 26, 92);
+}
+.btn0{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    border-radius: 60px;
+    background-color: rgb(248, 26, 92);
+    color: white;
+    font-weight: 700;
+    font-family: 'Prompt', sans-serif;
+}
+.main{
+    background: url(./img/pc.jpg)no-repeat;
+    background-size: cover;
+    background-position: 15% 85% ;
+    height: 100vh;
+    width: 100%;
+}
+.main h1{
+    width: 80%;
+    font-size: 2.3rem;
+    font-weight:700;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+}
+.btn1{
+    height: 45px;
+    width: 30%;
+    border: none;
+    outline: none;
+    background: rgb(248, 26, 92);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+    position: relative;
+    left: 10%;
+    transform: translate(-70%, 0);
+}
+.btn1:hover{
+    background: rgb(223, 11, 75);
+    transition: 0.5s;
+}
+.product p{
+    font-weight: bold;
+    color: darkgrey;
+}
+.card:hover{
+    box-shadow: 2px 3px 28px -10px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 3px 28px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 3px 28px -10px rgba(0,0,0,0.75);
+  transition: 0.5s;
+}
+.apple
+{
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(./img/copy\copy.jpg)no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 80vh;
+    width: 100%;
+}
+.apple h1{
+    font-family: 'Pacifico', cursive;
+}
+
+.news{
+    background: black;
+    color: white;
+}
+.news input{
+    height: 45px;
+    width:55%;
+    border: 2px solid white;
+    outline: none;
+    background: black;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.news ::placeholder{
+    color: white;
+}
+.btn2{
+    height: 45px;
+    width: 100px;
+    background: white;
+    color: black;
+    margin-left: -10px;
+    outline: none;
+    border: 2px solid white;
+    font-weight: 600;
+}
+.news p{
+    margin: 0;
+}
+.fab{
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding-right: 5px;
+}
+.fab:hover{
+    color: rgb(248, 26, 92);
+    transition: 0.5s;
+
+}

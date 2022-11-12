@@ -1,6 +1,163 @@
-{% extends "base_generic.html" %}
+
 
 {% block content %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+  </head>
+  <body>
+
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'index' %}">PC WORK SHOP</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="bi bi-pc"></i></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pc" viewBox="0 0 16 16">
+            <path d="M5 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H5Zm.5 14a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1Zm2 0a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1ZM5 1.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5ZM5.5 3h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1Z"/>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav m-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+              <li class="nav-item active">
+                <a class="nav-link " aria-current="page" href="{% url 'index' %}">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'cpus' %}">Популярное</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'computers' %}">Конфигуратор пк</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#">
+                  Контакты
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">О нас</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="search px-4" type="search" placeholder="Search" aria-label="П">
+              <button class="btn0" type="submit">Поиск</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<section class="product">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-lg-5 m-auto text-center">
+                         <h1>Популярные ПК</h1>
+                         <h6 style="color: red;">Высокая производительность и восхитительный дизайн</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 text-center">
+                        <div class="card bg-light border-0 mb-2">
+                            <div class="card-body">
+                                <img src="{% static 'css/img/hyperpc_0.jpg' %}"  class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h6>VOLT PLUS</h6>
+                        <p>$39.99</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card bg-light border-0 mb-2">
+                            <div class="card-body">
+                                <img src="{% static 'css/img/hyperpc_1.jpg' %}"  class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h6>INVADER PLUS</h6>
+                        <p>$49.99</p>
+                    </div>
+                    <div class="col-lg-3 text-center"> 
+                        <div class="card bg-light border-0 mb-2">
+                            <div class="card-body">
+                                <img src="{% static 'css/img/hyperpc_2.jpg' %}"  class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h6>VOLT</h6>
+                         <p>$29.99</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card bg-light border-0 mb-2">
+                            <div class="card-body">
+                                <img src="{% static 'css/img/hyperpc_3.jpg' %}"  class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h6>CYBER PLUS 1</h6>
+                        <p>$59.99</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card bg-light border-0 mb-2">
+                            <div class="card-body">
+                                <img src="{% static 'css/img/hyperpc_4.jpg' %}"  class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h6>VOLT PRO PLUS</h6>
+                        <p>$59.99</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card bg-light border-0 mb-2">
+                            <div class="card-body">
+                                <img src="{% static 'css/img/hyperpc_5.jpg' %}"  class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h6>UNLIMITED CONCEPT</h6>
+                        <p>$59.99</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card bg-light border-0 mb-2">
+                            <div class="card-body">
+                                <img src="{% static 'css/img/hyperpc_6.jpg' %}"  class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h6>UNLIMITED CYBER PLUS</h6>
+                        <p>$59.99</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <div class="card bg-light border-0 mb-2">
+                            <div class="card-body">
+                                <img src="{% static 'css/img/hyperpc_7.jpg' %}"  class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h6>CYBER PLUS 2</h6>
+                        <p>$59.99</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+<!--
+  <form action="{% url 'cpus' %}" method="get">
+    {% csrf_token %}
+    <label for="say">cores</label>
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="cores" id="cores">
+  </form>
+
   <h1>cpus List</h1>
   {% if cpu_list %}
   <ul>
@@ -13,4 +170,5 @@
   {% else %}
     <p>There are no cpus in the workshop.</p>
   {% endif %}
+-->
 {% endblock %}

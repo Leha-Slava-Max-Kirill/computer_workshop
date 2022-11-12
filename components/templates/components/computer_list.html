@@ -1,6 +1,261 @@
-{% extends "base_generic.html" %}
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+  </head>
+  <body>
+
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'index' %}">PC WORK SHOP</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="bi bi-pc"></i></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pc" viewBox="0 0 16 16">
+            <path d="M5 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H5Zm.5 14a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1Zm2 0a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1ZM5 1.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5ZM5.5 3h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1Z"/>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav m-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+              <li class="nav-item active">
+                <a class="nav-link " aria-current="page" href="{% url 'index' %}">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'cpus' %}">Популярное</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'computers' %}">Конфигуратор пк</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#">
+                  Контакты
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">О нас</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="search px-4" type="search" placeholder="Search" aria-label="П">
+              <button class="btn0" type="submit">Поиск</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 {% block content %}
+
+
+
+<aside id="filters">
+  <h1 class="bigHead">FILTER SHOP ITEMS</h1>
+  <h2 class="bump"><span class="results">37</span> Results Found</h2>
+
+  <div id="type">
+    <h1>CORES</h1> 
+    <div class="bump">
+      <div class="box1">
+        <input type="checkbox" id="clothing">
+        <label for="clothing" class="check-box"></label>
+        <h4>1 core</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="equipment">
+        <label for="equipment" class="check-box"></label>
+        <h4>2 cores</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="trips">
+        <label for="trips" class="check-box"></label>
+        <h4>4 cores</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="social">
+        <label for="social" class="check-box"></label>
+        <h4>6 cores</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="profile">
+        <label for="profile" class="check-box"></label>
+        <h4>8 cores</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="profile">
+        <label for="profile" class="check-box"></label>
+        <h4>10 cores</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="profile">
+        <label for="profile" class="check-box"></label>
+        <h4>12 cores</h4>
+      </div>
+    </div>
+  </div>
+  <div id="sports" class="clearfix">
+    <h1>SPORT</h1>
+    <div class="bump">
+      <div class="box1">
+        <input type="checkbox" id="nfl">
+        <label for="nfl" class="check-box"></label>
+        <h4>NFL</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="mlb">
+        <label for="mlb" class="check-box"></label>
+        <h4>PGA</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="pga">
+        <label for="pga" class="check-box"></label>
+        <h4>MLB</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="esports">
+        <label for="esports" class="check-box"></label>
+        <h4 class="clearMarg">E-SPORTS</h4>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+  <div id="specials" class="clearfix">
+    <h1>SPECIALS</h1>
+    <div class="specBump">
+      <div class="box2">
+        <input type="checkbox" id="onSale">
+        <label for="onSale" class="check-box"></label>
+        <h4>ON SALE</h4>
+      </div>
+      <div class="box2">
+        <input type="checkbox" id="newest">
+        <label for="newest" class="check-box"></label>
+        <h4>NEWEST</h4>
+      </div>
+      <div class="box2">
+        <input type="checkbox" id="featured">
+        <label for="featured" class="check-box"></label>
+        <h4>FEATURED</h4>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div id="priceRange" class="clearfix">
+    <h1>PRICE RANGE</h1>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <p>Value: <span id="demo"></span></p>
+  </div>
+
+
+  <!-- 
+<style>
+  .dropdown-check-list {
+  display: inline-block;
+}
+
+.dropdown-check-list .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 100px 5px 100px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-check-list .anchor:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  padding: 5px;
+  right: 10px;
+  top: 20%;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.dropdown-check-list .anchor:active:after {
+  right: 8px;
+  top: 21%;
+}
+
+.dropdown-check-list ul.items {
+  padding: 2px;
+  display: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.dropdown-check-list ul.items li {
+  list-style: none;
+}
+
+.dropdown-check-list.visible .anchor {
+  color: #0094ff;
+}
+
+.dropdown-check-list.visible .items {
+  display: block;
+}
+</style>
+
+
+
+<div id="list1" class="dropdown-check-list" tabindex="100">
+  <span class="anchor">Select Fruits</span>
+  <ul class="items">
+    <li><input type="checkbox" />Apple </li>
+    <li><input type="checkbox" />Orange</li>
+    <li><input type="checkbox" />Grapes </li>
+    <li><input type="checkbox" />Berry </li>
+    <li><input type="checkbox" />Mango </li>
+    <li><input type="checkbox" />Banana </li>
+    <li><input type="checkbox" />Tomato</li>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <p>Value: <span id="demo"></span></p>
+
+  </ul>
+</div>
+-->
+<script>
+  var checkList = document.getElementById('list1');
+checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList.classList.contains('visible'))
+    checkList.classList.remove('visible');
+  else
+    checkList.classList.add('visible');
+}
+</script>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+ <!--
   <h1>Computers List</h1>
   {% if computer_list %}
   <ul>
@@ -13,4 +268,382 @@
   {% else %}
     <p>There are no computers in the workshop.</p>
   {% endif %}
+-->
+<style type="text/css">
+  body {
+  padding: 40px 0 0 0;
+  font-family: 'Titillium Web', 
+sans-serif;
+  color: rgb(177, 177, 177);
+  padding: 20px 20px;
+}
+
+aside,
+section {
+  width: 275px;
+  border-right: 1px solid rgba(51, 51, 51, 0.3);
+  padding-right: 30px;
+}
+
+#topBar {
+  height: 55px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+#topBar input {
+  width:430px;
+  float:left;
+  clear: none;
+}
+
+#topBar select {
+  max-width: 200px;
+  float: right;
+}
+
+#topBar .player-search {
+  background: #fff url("//d1g3fc5n8s9pjg.cloudfront.net/img/icons/util/search.svg") no-repeat;
+  background-size: 14px 14px;
+  background-position: 10px center;
+  padding-left: 35px;
+  width: 500px;
+}
+
+.sortBy {
+  float: right;
+  width: 275px;
+}
+
+.sortBy h4 {
+  float: left;
+  margin-top: 7px;
+}
+
+#specials,
+#priceRange,
+#sports,
+#type,
+{
+  margin: 10px 0;
+  position: relative;
+  clear: both;
+}
+
+.value {
+  display: none !important;
+}
+
+.bigHead {
+  font-size: 1.8em;
+  color: rgb(101, 101, 101);
+  margin-top:0;
+  padding-top: 15px;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin: 0;
+   font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-top: -5px;
+}
+
+h4 {
+  color: #b1b1b1;
+  font-size: 1.1em;
+}
+
+.results {
+  color: #f4c015;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+#sports h4,
+#type h4 {
+  font-size: 1.1em;
+  display: inline-block;
+  margin: 5px 10px;
+  clear: none;
+}
+
+#sports .check-box,
+#type .check-box {
+  float: left;
+}
+
+.box1 {
+  min-width: 120px;
+  margin: 10px 0;
+  clear: none;
+  color: #b1b1b1;
+}
+
+#sports .box1 {
+  float: left;
+  margin: 4px 0;
+}
+
+.box2 {
+  float: left;
+  text-align: center;
+  margin-right: 17px;
+}
+
+.clearMarg {
+  margin: 15px 0;
+}
+
+#slider {}
+
+.prices {
+  margin: 0 auto;
+}
+
+.prices img {
+  width: 25px;
+  margin-right: 5px;
+}
+
+.minVal,
+.maxVal {
+  margin-top: 20px;
+  background: url("//d1g3fc5n8s9pjg.cloudfront.net/img/icons/user/ticket-gold.svg") no-repeat;
+  background-size: 25px;
+  padding: 5px 0 5px 25px;
+}
+
+.minVal img,
+.maxVal img {
+  width: 35px;
+}
+
+.minVal h3,
+.maxVal h3 {
+  float: right;
+  clear: none;
+  padding-left: 2px;
+}
+
+.minVal {
+  float: left;
+  clear: none;
+}
+
+.maxVal {
+  float: right;
+  clear: none;
+}
+
+.bump {
+  margin-left: 25px;
+  position: relative
+}
+
+.specBump {
+  margin-left: 5px;
+}
+
+.ui-widget-header {
+  background: #f4c015;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  background: #656565;
+}
+
+.ui-widget-content {
+  background: #ddd;
+}
+
+.ui-slider-handle:focus {
+  outline: none;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -.5em;
+  margin-left: -.6em;
+  height: 1.8em;
+  width: 1.3em
+}
+/*CHECK BOXES*/
+/* Checkmark style starts */
+
+@-moz-keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 15px;
+  }
+}
+
+@-webkit-keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 15px;
+  }
+}
+
+@keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 15px;
+  }
+}
+
+@keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 30px;
+  }
+}
+
+@-webkit-keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 30px;
+  }
+}
+
+@-moz-keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 30px;
+  }
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.check-box {
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 2px solid #838383;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: border-color ease 0.2s;
+  -o-transition: border-color ease 0.2s;
+  -webkit-transition: border-color ease 0.2s;
+  transition: border-color ease 0.2s;
+  cursor: pointer;
+}
+
+.check-box:last-child,
+#specials ul li:last-child {
+  /*margin-right: 0;*/
+}
+
+.check-box::before,
+.check-box::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  height: 0;
+  width: 5px;
+  background-color: #f4c015;
+  display: inline-block;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  border-radius: 2px;
+  content: ' ';
+  -webkit-transition: opacity ease .5;
+  -moz-transition: opacity ease .5;
+  transition: opacity ease .5;
+}
+
+.check-box::before {
+  top: 20px;
+  left: 15px;
+  box-shadow: 0 0 0 3px #efefef;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.check-box::after {
+  top: 10px;
+  left: 4px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type=checkbox]:checked + .check-box,
+.check-box.checked {
+  border-color: #f4c015;
+}
+
+input[type=checkbox]:checked + .check-box::after,
+.check-box.checked::after {
+  height: 10px;
+  -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
+  -o-animation: dothabottomcheck 0.2s ease 0s forwards;
+  -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
+  animation: dothabottomcheck 0.2s ease 0s forwards;
+}
+
+input[type=checkbox]:checked + .check-box::before,
+.check-box.checked::before {
+  height: 60px;
+  -moz-animation: dothatopcheck 0.4s ease 0s forwards;
+  -o-animation: dothatopcheck 0.4s ease 0s forwards;
+  -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
+  animation: dothatopcheck 0.4s ease 0s forwards;
+}
+
+.grey {
+  color: rgb(51, 51, 51) !important;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  height: 55px;
+  z-index: 1;
+  width:100%;
+}
+</style>
 {% endblock %}
