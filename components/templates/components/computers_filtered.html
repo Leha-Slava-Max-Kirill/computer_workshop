@@ -1,0 +1,53 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<form action="" method="get">
+  cpu cores:
+  <input type="value" name="cpu_cores_start" />
+  <input type="value" name="cpu_cores_end" /> <br>
+  cpu threads: 
+  <input type="value" name="cpu_threads_start" />
+  <input type="value" name="cpu_threads_end" /> <br>
+  cpu performance: 
+  <input type="value" name="cpu_performance_start" />
+  <input type="value" name="cpu_performance_end" /> <br>
+  motherboard slotsRam: 
+  <input type="value" name="motherboard_slotsRam_start" />
+  <input type="value" name="motherboard_slotsRam__end" /> <br>
+  gpu performance: 
+  <input type="value" name="gpu_performance_start" />
+  <input type="value" name="gpu_performance_end" /> <br>
+  gpu vram: 
+  <input type="value" name="gpu_vram_start" />
+  <input type="value" name="gpu_vram_end" /> <br>
+  psu power: 
+  <input type="value" name="psu_power_start" />
+  <input type="value" name="psu_power_end" /> <br>
+  storage capacity: 
+  <input type="value" name="storage_capacity_start" />
+  <input type="value" name="storage_capacity_end" /> <br>
+   <input type="submit" value="OK" 
+        name="Submit" id="frm1_submit" />
+ </form>
+
+
+    <h1>Computer ASSembler Home</h1>
+    <p>Welcome to Computer ASSembler, a website developed by <em>suraba03, sharss, kitoshka bzn</em>!</p>
+    <h2>Dynamic content</h2>
+    <p>The workshop has the following record counts:</p>
+  
+    <h1>computers List</h1>
+    {% if computer_list %}
+    <ul>
+      {% for computer in computer_list %}
+      <li>
+        <a href="{{ computer.get_absolute_url }}">{{ computer.name }}</a>
+        threads = {{computer.cpu.threads}} cores = {{computer.cpu.cores}}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>There are no computers in the workshop.</p>
+    {% endif %}
+    {% endblock %}
