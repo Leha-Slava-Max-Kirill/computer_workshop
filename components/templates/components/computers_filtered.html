@@ -1,0 +1,64 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<form action="" method="get">
+  cpu cores:
+  <input type="text" placeholder="1" value="1" name="cpu_cores_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="cpu_cores_end" /> <br>
+  cpu threads: 
+  <input type="text" placeholder="1" value="1" name="cpu_threads_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="cpu_threads_end" /> <br>
+  cpu performance: 
+  <input type="text" placeholder="1" value="1" name="cpu_performance_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="cpu_performance_end" /> <br>
+  gpu performance: 
+  <input type="text" placeholder="1" value="1" name="gpu_performance_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="gpu_performance_end" /> <br>
+  gpu vram: 
+  <input type="text" placeholder="1" value="1" name="gpu_vram_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="gpu_vram_end" /> <br>
+  psu power: 
+  <input type="text" placeholder="1" value="1" name="psu_power_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="psu_power_end" /> <br>
+
+   <input type="submit" value="ЛЮТЫЙ  OK" 
+        name="Submit" id="frm1_submit" />
+ </form>
+
+
+    <h1>Computer ASSembler Home</h1>
+    <p>Welcome to Computer ASSembler, a website developed by <em>suraba03, sharss, kitoshka bzn</em>!</p>
+    <h2>Dynamic content</h2>
+    <p>The workshop has the following record counts:</p>
+  
+    <h1>computers List</h1>
+    {% if computer_list %}
+    <ul>
+
+      <table border=1 frame=void rules=rows>
+        <tr>
+          <th>name    </th>
+          <th>cores   </th>
+          <th>threads   </th>
+          <th>cpu performance   </th>
+          <th>gpu performance   </th>
+          <th>gpu vram    </th>
+          <th>psu power   </th>
+        </tr>
+          {% for computer in computer_list %}
+            <tr>
+                <td><a href="{{ computer.get_absolute_url }}">{{ computer.name }}</a></td>
+                <td> {{computer.cpu.cores}} </td>
+                <td> {{computer.cpu.threads}} </td>
+                <td> {{computer.cpu.performance}} </td>
+                <td> {{computer.gpu.performance}} </td>
+                <td> {{computer.gpu.vram}} </td>
+                <td> {{computer.psu.power}} </td>
+            </tr>
+          {% endfor %}
+    </table>
+    {% else %}
+    <p>There are no computers in the workshop.</p>
+    {% endif %}
+    {% endblock %}
