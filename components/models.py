@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-
+from django.db.models import Q
 
 
 # LAYER ONE
@@ -52,6 +52,8 @@ class Cpu(models.Model):
     def get_absolute_url(self):
         """Returns the URL to access a detail record for this computer."""
         return reverse('cpu-detail', args=[str(self.id)])
+
+
 
 class Motherboard(models.Model):
     """Model representing a Motherboard."""
