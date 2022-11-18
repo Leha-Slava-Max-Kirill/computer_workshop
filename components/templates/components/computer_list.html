@@ -56,6 +56,226 @@
 
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
+<form action="" method="get">
+
+  <div id="list1" class="dropdown-check-list" tabindex="100">
+  <span class="anchor">cpu cores</span>
+  <ul class="items">
+    cpu cores:
+    <input type="text" placeholder="1" value="1" name="cpu_cores_start" />
+    <input type="text" placeholder="999999999" value="999999999" name="cpu_cores_end" />
+      </ul>
+</div>
+<br>
+
+ <div id="list2" class="dropdown-check-list" tabindex="100">
+  <span class="anchor">cpu threads</span>
+  <ul class="items">
+  cpu threads: 
+  <input type="text" placeholder="1" value="1" name="cpu_threads_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="cpu_threads_end" /> 
+  </ul>
+</div>
+  <br>
+
+   <div id="list3" class="dropdown-check-list" tabindex="100">
+  <span class="anchor">cpu performance</span>
+  <ul class="items">
+  cpu performance: 
+  <input type="text" placeholder="1" value="1" name="cpu_performance_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="cpu_performance_end" /> 
+  </ul>
+</div>
+  <br>
+
+   <div id="list4" class="dropdown-check-list" tabindex="100">
+  <span class="anchor">gpu performance</span>
+  <ul class="items">
+  gpu performance: 
+  <input type="text" placeholder="1" value="1" name="gpu_performance_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="gpu_performance_end" /> 
+  </ul>
+</div>
+  <br>
+
+   <div id="list5" class="dropdown-check-list" tabindex="100">
+  <span class="anchor">gpu vram</span>
+  <ul class="items">
+  gpu vram: 
+  <input type="text" placeholder="1" value="1" name="gpu_vram_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="gpu_vram_end" /> 
+  </ul>
+</div>
+  <br>
+
+   <div id="list6" class="dropdown-check-list" tabindex="100">
+  <span class="anchor">psu power</span>
+  <ul class="items">
+  psu power: 
+  <input type="text" placeholder="1" value="1" name="psu_power_start" />
+  <input type="text" placeholder="999999999" value="999999999" name="psu_power_end" /> 
+  </ul>
+</div>
+  <br>
+
+   <input type="submit" value="ЛЮТЫЙ  OK" 
+        name="Submit" id="frm1_submit" />
+ </form>
+
+ <script>
+   var checkList1 = document.getElementById('list1');
+checkList1.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList1.classList.contains('visible'))
+    checkList1.classList.remove('visible');
+  else
+    checkList1.classList.add('visible');
+}
+ </script>
+
+  <script>
+   var checkList2 = document.getElementById('list2');
+checkList2.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList2.classList.contains('visible'))
+    checkList2.classList.remove('visible');
+  else
+    checkList2.classList.add('visible');
+}
+ </script>
+
+  <script>
+   var checkList3 = document.getElementById('list3');
+checkList3.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList3.classList.contains('visible'))
+    checkList3.classList.remove('visible');
+  else
+    checkList3.classList.add('visible');
+}
+ </script>
+
+  <script>
+   var checkList4 = document.getElementById('list4');
+checkList4.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList4.classList.contains('visible'))
+    checkList4.classList.remove('visible');
+  else
+    checkList4.classList.add('visible');
+}
+ </script>
+
+ <script>
+   var checkList5 = document.getElementById('list5');
+checkList5.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList5.classList.contains('visible'))
+    checkList5.classList.remove('visible');
+  else
+    checkList5.classList.add('visible');
+}
+ </script>
+
+  <script>
+   var checkList6 = document.getElementById('list6');
+checkList6.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList6.classList.contains('visible'))
+    checkList6.classList.remove('visible');
+  else
+    checkList6.classList.add('visible');
+}
+ </script>
+
+
+ <style type="text/css">
+   .dropdown-check-list {
+  display: inline-block;
+}
+
+.dropdown-check-list .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 100px 5px 50px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-check-list .anchor:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  padding: 5px;
+  right: 10px;
+  top: 20%;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.dropdown-check-list .anchor:active:after {
+  right: 8px;
+  top: 21%;
+}
+
+.dropdown-check-list ul.items {
+  padding: 2px;
+  display: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.dropdown-check-list ul.items li {
+  list-style: none;
+}
+
+.dropdown-check-list.visible .anchor {
+  color: #0094ff;
+}
+
+.dropdown-check-list.visible .items {
+  display: block;
+}
+ </style>
+
+
+    <h1>Computer ASSembler Home</h1>
+    <p>Welcome to Computer ASSembler, a website developed by <em>suraba03, sharss, kitoshka bzn</em>!</p>
+    <h2>Dynamic content</h2>
+    <p>The workshop has the following record counts:</p>
+  
+    <h1>computers List</h1>
+    {% if computer_list %}
+    <ul>
+
+      <table border=1 frame=void rules=rows>
+        <tr>
+          <th>name    </th>
+          <th>cores   </th>
+          <th>threads   </th>
+          <th>cpu performance   </th>
+          <th>gpu performance   </th>
+          <th>gpu vram    </th>
+          <th>psu power   </th>
+        </tr>
+          {% for computer in computer_list %}
+            <tr>
+                <td><a href="{{ computer.get_absolute_url }}">{{ computer.name }}</a></td>
+                <td> {{computer.cpu.cores}} </td>
+                <td> {{computer.cpu.threads}} </td>
+                <td> {{computer.cpu.performance}} </td>
+                <td> {{computer.gpu.performance}} </td>
+                <td> {{computer.gpu.vram}} </td>
+                <td> {{computer.psu.power}} </td>
+            </tr>
+          {% endfor %}
+    </table>
+    {% else %}
+    <p>There are no computers in the workshop.</p>
+    {% endif %}
+
+
+<!--
+
 {% block content %}
 
 
@@ -162,7 +382,7 @@
   </div>
 
 
-  <!-- 
+
 <style>
   .dropdown-check-list {
   display: inline-block;
@@ -234,7 +454,7 @@
 
   </ul>
 </div>
--->
+
 <script>
   var checkList = document.getElementById('list1');
 checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
@@ -255,7 +475,7 @@ slider.oninput = function() {
 }
 </script>
 
- <!--
+ 
   <h1>Computers List</h1>
   {% if computer_list %}
   <ul>
@@ -268,7 +488,7 @@ slider.oninput = function() {
   {% else %}
     <p>There are no computers in the workshop.</p>
   {% endif %}
--->
+
 <style type="text/css">
   body {
   padding: 40px 0 0 0;
@@ -647,3 +867,5 @@ input[type=checkbox]:checked + .check-box::before,
 }
 </style>
 {% endblock %}
+
+---->
